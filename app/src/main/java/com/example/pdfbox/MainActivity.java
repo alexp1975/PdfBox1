@@ -29,6 +29,13 @@ public class MainActivity extends AppCompatActivity {
     Bitmap pageImage;
     TextView tv;
 
+    PDBox info = new PDBox();
+
+    String Description = info.getDesc();
+    String clientID = info.getClientId();
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -85,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
             PDAcroForm acroForm = docCatalog.getAcroForm();
 // Fill the text field
             PDTextField field = (PDTextField) acroForm.getField("Description_of_works");
-            field.setValue("Filled Text Field");
+            field.setValue(Description);
 // Optional: don't allow this field to be edited
             field.setReadOnly(true);
             //PDField checkbox = acroForm.getField("Checkbox");
@@ -102,7 +109,8 @@ public class MainActivity extends AppCompatActivity {
 
 
             System.out.println(root.getAbsolutePath());
-            String path = root.getAbsolutePath() + "/FilledForm.pdf";
+
+            String path = root.getAbsolutePath() + "/" + clientID + ".pdf";
           //  tv.setText("Saved filled form to " + path);
             System.out.println(path);
             document.save(path);

@@ -1,25 +1,21 @@
 package com.example.pdfbox;
 
-import java.io.File;
+
 
 
 
 public class PDBox {
 
-  //  File root;
 
-  //  Bitmap pageImage;
- //   TextView tv;
-
+   private String desc = "This is a sample of a description of works";
+   private String ClientId = "clive";
 
 
+    public String getDesc() {
+        return desc;
+    }
 
-
-
-
-
-
-
-
-
+    public String getClientId() {
+        return ClientId;
+    }
 }
