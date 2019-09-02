@@ -80,7 +80,6 @@ public class MainActivity extends AppCompatActivity {
 
         ////////////////////////////////////////////////////////////////////////////////////////////
 
-
         try {
 
 // Load the document and get the AcroForm
